@@ -14,7 +14,20 @@ st.set_page_config(
 # =====================================================
 # LOAD MODEL & ENCODERS
 # =====================================================
-model = pickle.load(open("model.pkl", "rb"))
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+with open("le_product.pkl", "rb") as f:
+    le_product = pickle.load(f)
+
+with open("le_factory.pkl", "rb") as f:
+    le_factory = pickle.load(f)
+
+with open("le_region.pkl", "rb") as f:
+    le_region = pickle.load(f)
+
+with open("le_ship.pkl", "rb") as f:
+    le_ship = pickle.load(f)
 
 le_product = pickle.load(open("le_product.pkl", "rb"))
 le_factory = pickle.load(open("le_factory.pkl", "rb"))
